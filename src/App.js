@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Navbar from "./components/Navbar";
 import QuoteList from "./components/QuoteList";
+import QuoteForm from "./components/QuoteForm";
 
 class App extends React.Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navbar />
+        <QuoteForm />
         {this.state.quote ? (
           <QuoteList quote={this.state.quote} />
         ) : (
